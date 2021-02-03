@@ -24,6 +24,9 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('posts', 'PostController@index')->name('posts.index');
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
